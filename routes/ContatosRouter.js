@@ -7,5 +7,9 @@ const ContatosController = require("../controllers/ContatosController")
 const router = express.Router();
 //pede para o roteador definir uma rota :(metodo get,endereço)
 router.get('/contatos', ContatosController.listarContatos);
+router.get('/contatos/:id', ContatosController.capturarContato)
+
+
+
 //exportar roteador
 module.exports = router;
