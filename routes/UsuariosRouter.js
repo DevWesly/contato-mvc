@@ -7,5 +7,6 @@ const UsuariosController = require("../controllers/UsuariosController");
 const router = express.Router();
 //criar a rota no roteador
 router.get('/registrar',UsuariosController.showRegistrar);
+router.post('/usuarios',UsuariosController.store)
 //exportar o roteador    para uso externo
 module.exports= router;

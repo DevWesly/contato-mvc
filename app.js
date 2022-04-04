@@ -5,11 +5,22 @@ const express = require('express');
 const UsuariosRouter = require('./routes/UsuariosRouter');
 const ContatosRouter = require("./routes/ContatosRouter");
 
+
 // Criar um servidor/aplicação com o express
 const app = express(); 
 
 //configurar o ejs como template engine
 app.set('view engine','ejs'); 
+
+
+
+//Configura o req.body para conter as informação
+//digitadas pelo usuario num formulario
+app.use(express.urlencoded({ extended: false}));
+
+
+    
+
 //configurando a pasta public para arquivos estaticos
 app.use(express.static("public"));
 
